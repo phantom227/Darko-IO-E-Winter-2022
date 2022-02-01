@@ -12,6 +12,8 @@ const imgSize = 512; //our image will be 512x512 pixels, which is what StyleGAN 
 let angle = 0;
 let count = 0;
 
+//ONLY MAJOR CHANGES I MADE WERE IN new NoiseLoop() IN THE function setup() BELOW: 
+
 function setup() {
   createCanvas(imgSize, imgSize);
   for (let i = 0; i < imgSize; i++) {
@@ -19,6 +21,7 @@ function setup() {
     // n[i] = new NoiseLoop(80, -1, 1); // Landscapes, Portraits
     n[i] = new NoiseLoop(10, -1, 1); 
   }
+  
   generateImage();
 
 }
